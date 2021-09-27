@@ -1,4 +1,36 @@
-h1 {
-  font-size: 72pt;
-  color: blue;
+#container {
+  width: 65%;
+  margin: 30px auto;
+  clear: both;
+  padding: 20px 0;
+}
+#box-1 {
+  outline: 1px solid red;
+  float: left;
+  width: 98%;
+  height: 100px;
+}
+#box-2 {
+  outline: 1px solid olive;
+  float: right;
+  width: 33%;
+  height: 100px;
+}
+#box-3 {
+  outline: 1px solid fuchsia;
+  float: left;
+  width: 65%;
+  height: 200px;
+}
+#box-4 {
+  outline: 1px solid maroon;
+  float: right;
+  width: 33%;
+  height: 100px;
+}
+#box-5 {
+  outline: 1px solid blue;
+  float: left;
+  width: 98%;
+  height: 100px;
 }
