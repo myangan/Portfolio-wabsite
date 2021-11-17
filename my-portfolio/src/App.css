@@ -1,38 +1,73 @@
 .App {
+  background: #43484b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #c4ccd3, #414546);
+  background: linear-gradient(to top, #dde7f0, #2c2f30);
+
   text-align: center;
+
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 15% 70% 15%;
+  grid-template-areas:
+    "header header header header"
+    "main main main sidebar"
+    "footer footer footer footer";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.item-a {
+  grid-area: header;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.item-b {
+  grid-area: main;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.item-c {
+  margin: 10px;
+  border-radius: 10px;
+  grid-area: sidebar;
+  border: rgb(10, 10, 10) 2px solid;
+  -moz-box-shadow: 3px 3px 5px 6px rgb(44, 41, 41);
+  -webkit-box-shadow: 3px 3px 5px 6px rgb(51, 46, 46);
+  box-shadow: 3px 3px 5px 6px rgb(46, 42, 42);
 }
-
-.App-link {
-  color: #61dafb;
+.item-d {
+  grid-area: footer;
+  padding: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+img {
+  margin: 10px;
+}
+img:hover {
+  margin: auto;
+  height: 40px;
+  width: 40px;
+  transition: all 0.5s;
+}
+a.button2 {
+  display: inline-block;
+  padding: 0.5em 3em;
+  border: 0.16em solid #554d4d;
+  margin: 0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #bbabab;
+  text-align: center;
+  transition: all 0.15s;
+}
+a.button2:hover {
+  color: #dddddd;
+  border-color: #dddddd;
+}
+a.button2:active {
+  color: #bbbbbb;
+  border-color: #bbbbbb;
+}
+@media all and (max-width: 30em) {
+   a.button2 {
+    display: block;
+    margin: 0.4em auto;
   }
 }
